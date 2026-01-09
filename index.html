@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ Thống Tra Cứu Công Thức</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Hệ Thống Tra Cứu Công Thức</h1>
+            <p>Nhập mã Recipe ID để xem thông tin chi tiết thành phần</p>
+        </header>
+
+        <section class="search-area">
+            <div class="search-box">
+                <input type="text" id="recipeInput" placeholder="Ví dụ: 02/ND/2025..." onkeyup="handleKeyPress(event)">
+                <button onclick="searchRecipe()">Tra cứu</button>
+            </div>
+            <div id="suggestedIds" class="suggestions"></div>
+        </section>
+
+        <section id="resultArea" class="result-area" style="display: none;">
+            <div class="product-info">
+                <h2>Sản phẩm: <span id="displayProductName">-</span></h2>
+                <p><strong>Công bố:</strong> <span id="displayAnnouncement">-</span></p>
+            </div>
+            
+            <div class="table-container">
+                <table id="recipeTable">
+                    <thead>
+                        <tr>
+                            <th>Thành phần (Ingredient)</th>
+                            <th>% wt</th>
+                            <th>Khối lượng (Mass)</th>
+                            <th>Mục đích (Purpose)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="recipeBody">
+                        </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+    <script src="script.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
